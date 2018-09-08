@@ -73,7 +73,7 @@
                     <launchers>
                         <launcher>
                             <id>app</id>
-                            <mainClass>com.light.sword.ylazy.LightSwordApplication</mainClass>
+                            <mainClass>com.proApplication</mainClass>
                             <args>
                                 <arg>-deprecation</arg>
                             </args>
@@ -89,9 +89,24 @@
 
                 </dependencies>
             </plugin>
+          <!--  <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>-->
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.proApplication</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
